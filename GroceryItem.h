@@ -13,7 +13,7 @@ class GroceryItem
 
   public:
     GroceryItem(); //default constructor
-    GroceryItem(const string&, const int&, const float&, const bool&); //overloaded construtor
+    GroceryItem(const string& n, const int& q, const float& u, const bool& t); //overloaded construtor
     //accessor functions
     string getName() const;
     void setName(const string&);
@@ -33,12 +33,12 @@ GroceryItem::GroceryItem() //default constructor
   _taxable = 0;
 }
 
-GroceryItem::GroceryItem(const string& name, const int& quan, const float& unit, const bool& tax) //overloaded constructure
+GroceryItem::GroceryItem(const string& n, const int& q, const float& u, const bool& t) //overloaded constructure
 {
-  _name = name;
-  _quantity = quan;
-  _unitPrice = unit;
-  _taxable = tax;
+  _name = n;
+  _quantity = q;
+  _unitPrice = u;
+  _taxable = t;
 }
 
 //Accessor Functions
