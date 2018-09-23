@@ -12,49 +12,53 @@ class GroceryItem
     bool _taxable;
 
   public:
-    GroceryItem(); //default constructor
-    GroceryItem(const string& n, const int& q, const float& u, const bool& t); //overloaded construtor
+    GroceryItem() //default constructor
+    {
+      _name = " ";
+      _quantity = 0;
+      _unitPrice = 0;
+      _taxable = 0;
+    } 
+    
+    GroceryItem(const string& n, const int& q, const float& u, const bool& t) //overloaded construtor
+    {
+      _name = n;
+      _quantity = q;
+      _unitPrice = u;
+      _taxable = t;
+    }
+    
     //accessor functions
-    string getName() const;
-    void setName(const string&);
-    int getQuantity() const;
-    void setQuantity(const int&);
-    float getUnitPrice() const;
-    void setUnitPrice(const float&);
-    bool isTaxable() const;
-    void setTaxable(const bool&);
+    void setName(const string& n)
+    {
+      _name = n;
+    }
+    string getName() const
+    {
+      return _name;
+    }
+    void setQuantity(const int& q)
+    {
+      _quantity = q;
+    }
+    int getQuantity() const
+    {
+      return _quantity;
+    }
+    void setUnitPrice(const float& u)
+    {
+      _unitPrice = u;
+    }
+    float getUnitPrice() const
+    {
+      return _unitPrice;
+    }
+    void setTaxable(const bool& t)
+    {
+      _taxable = t;
+    }
+    bool isTaxable() const
+    {
+      return _taxable;
+    }
 };
-
-GroceryItem::GroceryItem() //default constructor
-{
-  _name = " ";
-  _quantity = 0;
-  _unitPrice = 0;
-  _taxable = 0;
-}
-
-GroceryItem::GroceryItem(const string& n, const int& q, const float& u, const bool& t) //overloaded constructure
-{
-  _name = n;
-  _quantity = q;
-  _unitPrice = u;
-  _taxable = t;
-}
-
-//Accessor Functions
-string GroceryItem::getName() const
-{
-  return _name;
-}
-int GroceryItem::getQuantity() const
-{
-  return _quantity;
-}
-float GroceryItem::getUnitPrice() const
-{
-  return _unitPrice;
-}
-bool GroceryItem::isTaxable() const
-{
-  return _taxable;
-}
