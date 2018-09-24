@@ -12,7 +12,7 @@ class GroceryItem
     bool _taxable;
 
   public:
-    GroceryItem() //default constructor
+    GroceryItem() //This is a default constructor
     {
       _name = " ";
       _quantity = 0;
@@ -20,7 +20,7 @@ class GroceryItem
       _taxable = 0;
     } 
     
-    GroceryItem(const string& n, const int& q, const float& u, const bool& t) //overloaded construtor
+    GroceryItem(const string& n, const int& q, const float& u, const bool& t) //This is an overloaded construtor
     {
       _name = n;
       _quantity = q;
@@ -28,36 +28,36 @@ class GroceryItem
       _taxable = t;
     }
     
-    //accessor functions
-    void setName(const string& n)
+    //These are accessor functions
+    void setName(const string& n) //set name
     {
       _name = n;
     }
-    string getName() const
+    string getName() const //get name
     {
       return _name;
     }
-    void setQuantity(const int& q)
+    void setQuantity(const int& q) //set quantity
     {
       _quantity = q;
     }
-    int getQuantity() const
+    int getQuantity() const //get quantity
     {
       return _quantity;
     }
-    void setUnitPrice(const float& u)
+    void setUnitPrice(const float& u) //set unit price
     {
       _unitPrice = u;
     }
-    float getUnitPrice() const
+    float getUnitPrice() const //get unit price
     {
       return _unitPrice;
     }
-    void setTaxable(const bool& t)
+    void setTaxable(const bool& t) //set tax
     {
       _taxable = t;
     }
-    bool isTaxable() const
+    bool isTaxable() const //get tax
     {
       return _taxable;
     }
